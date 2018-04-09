@@ -1,0 +1,80 @@
+@charset "UTF-8";
+
+.bad-browser {
+    & &-item {
+        text-align: center;
+        padding-top: 20px;
+
+        .browser {
+            display: inline-block;
+            border-bottom: 2px solid transparent;
+            padding-bottom: 5px;
+            margin-bottom: 5px;
+            transition: border-bottom-color .2s;
+
+            &-icon {
+                width: 79px;
+                height: 79px;
+
+                &-safari {
+                    background: transparent url('#{$path-published-images}/browsers.png') no-repeat 0 $bad-browser-position-safari;
+                }
+
+                &-firefox {
+                    background: transparent url('#{$path-published-images}/browsers.png') no-repeat 0 $bad-browser-position-firefox;
+                }
+
+                &-chrome {
+                    background: transparent url('#{$path-published-images}/browsers.png') no-repeat 0 $bad-browser-position-chrome;
+                }
+
+                &-opera {
+                    background: transparent url('#{$path-published-images}/browsers.png') no-repeat 0 $bad-browser-position-opera;
+                }
+            }
+        }
+
+        .browser-store {
+            display: inline-block;
+            padding-top: 50px;
+            width: 120px;
+            height: 36px;
+            overflow: hidden;
+            transition: opacity .2s;
+
+            &-apple {
+                background: transparent url('#{$path-published-images}/app-store.png') no-repeat center center;
+            }
+
+            &-google {
+                background: transparent url('#{$path-published-images}/google-play.png') no-repeat center center;
+            }
+        }
+
+        .mobile_store {
+            &:hover {
+                .browser-store {
+                    opacity: .75;
+
+                    &:hover {
+                        opacity: 1;
+                    }
+                }
+            }
+
+            &.row {
+                padding: 0;
+
+                .col {
+                    padding: 0;
+                }
+            }
+        }
+
+        &:hover {
+            .browser {
+                border-bottom: 2px solid $primary-color;
+            }
+        }
+    }
+}
