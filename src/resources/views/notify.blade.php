@@ -11,11 +11,9 @@
         @component('mail::table')
             | Key | Value |
             | --- |:---:|
-            | DB ID | {{ $bad_browser->id }} |
-            | User Agent | {{ $bad_browser->user_agent }} |
-            | User ID | {{ $bad_browser->user_id ?: '---' }} |
-            | IP | {{ $bad_browser->client_ip }} |
-            | Date | {{ date('Y-m-d H:i:s') }} |
+            @foreach($data as $key => $value)
+                | {{ $key }} | {{ $value }} |
+            @endforeach
         @endcomponent
     @endslot
 
