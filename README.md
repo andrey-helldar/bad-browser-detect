@@ -65,6 +65,8 @@ In the `config/bad_browser.php` settings file, specify the minimum permissible v
 
 Now, if a user logs in from an outdated browser, it automatically redirects to the page `/bad-browser`. On this page, the user can click on the link to download a modern browser, or notify the administrator about the version detection error. In this case, the user's user-agent information will be recorded in the database, and an email notification of the incident will be sent to you.
 
+![you are using an outdated browser](https://user-images.githubusercontent.com/10347617/38487129-dc492e08-3be7-11e8-845d-6093e16741d1.png)
+
 
 ## Copyright and License
 
