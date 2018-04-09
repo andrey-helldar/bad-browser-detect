@@ -19,7 +19,7 @@ return [
          * If you want to override the package styles, you can create your own stylesheet and link to it.
          */
 
-        // 'additional_css' => 'css/bad-browser.css'),
+        // 'additional_css' => 'css/bad-browser.css',
     ],
 
     /*
