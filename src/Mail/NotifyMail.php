@@ -40,7 +40,7 @@ class NotifyMail extends Mailable
     public function __construct(BadBrowser $bad_browser)
     {
         $this->bad_browser = $bad_browser;
-        $this->agent       = new Agent();
+        $this->agent = new Agent();
 
         $this->title = config('bad_browser.email.subject');
 
@@ -119,7 +119,7 @@ class NotifyMail extends Mailable
     protected function platform()
     {
         $platform = $this->agent->platform($this->bad_browser->user_agent);
-        $version  = $this->agent->version($platform);
+        $version = $this->agent->version($platform);
 
         return implode(' ', [$platform, $version]);
     }
@@ -133,7 +133,5 @@ class NotifyMail extends Mailable
         $version = $this->agent->version($browser);
 
         return implode(' ', [$browser, $version]);
-
-
     }
 }
