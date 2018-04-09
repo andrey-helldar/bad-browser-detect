@@ -56,6 +56,8 @@ In some cases, we can modify the CSS page styles, so periodically check the rele
 php artisan vendor:publish --tag=assets
 ```
 
+Next, call the command `php artisan migrate` to create a table in the database.
+
 
 ## Using
 
