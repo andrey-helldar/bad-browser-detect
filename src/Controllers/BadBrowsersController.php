@@ -35,10 +35,10 @@ class BadBrowsersController extends Controller
     {
         $browser = $agent->browser($request->userAgent());
         $version = $agent->version($browser);
-        $need    = config('bad_browser.versions.' . Str::lower($browser), 'unknown');
+        $need = config('bad_browser.versions.' . Str::lower($browser), 'unknown');
 
         $route_name = $this->variables->routeMainName();
-        $route_to   = $this->variables->routeToName();
+        $route_to = $this->variables->routeToName();
 
         return view('bad-browser::info')
             ->with(compact('browser', 'version', 'need', 'route_name', 'route_to'));
@@ -51,9 +51,9 @@ class BadBrowsersController extends Controller
      */
     public function store(Request $request)
     {
-        $user_id    = \Auth::check() ? \Auth::user()->id : null;
+        $user_id = \Auth::check() ? \Auth::user()->id : null;
         $user_agent = $request->userAgent();
-        $client_ip  = $request->getClientIp();
+        $client_ip = $request->getClientIp();
 
         $item = BadBrowser::query()
             ->create(compact('user_id', 'user_agent', 'client_ip'));

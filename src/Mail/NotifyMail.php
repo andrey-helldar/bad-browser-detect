@@ -29,7 +29,7 @@ class NotifyMail extends Mailable
     public function __construct(BadBrowser $bad_browser)
     {
         $this->bad_browser = $bad_browser;
-        $this->title       = config('bad_browser.email.subject');
+        $this->title = config('bad_browser.email.subject');
     }
 
     /**

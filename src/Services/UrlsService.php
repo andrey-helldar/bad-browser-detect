@@ -73,8 +73,8 @@ class UrlsService
     public function encodedBrowserUrl($device_type = 'desktop')
     {
         $variables = VariablesService::init();
-        
-        $url     = $variables->browserUrl($this->url, $device_type);
+
+        $url = $variables->browserUrl($this->url, $device_type);
         $encoded = $this->route($variables->routeMainName())->encode($url);
 
         return $encoded;

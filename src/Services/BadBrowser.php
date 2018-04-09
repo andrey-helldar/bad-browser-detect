@@ -27,7 +27,7 @@ class BadBrowser
      */
     public function __construct()
     {
-        $this->agent  = new Agent();
+        $this->agent = new Agent();
         $this->config = collect(config('bad_browser.versions', []));
     }
 
