@@ -27,14 +27,17 @@ return [
      */
 
     'versions' => [
-        'ie' => 11,
-        'edge' => 10,
-        'chrome' => 43,
-        'opera' => 43,
-        'firefox' => 31,
-        'safari' => 8,
-        'android' => 5,
-        'ios' => 7,
+        'ie'         => 11,
+        'edge'       => 10,
+        'chrome'     => 43,
+        'opera'      => 43,
+        'opera-mini' => 43,
+        'firefox'    => 31,
+        'safari'     => 8,
+        'android'    => 5,
+        'ios'        => 7,
+        'ucbrowser'  => 9,
+        'vivaldi'    => 1,
     ],
 
     /*
@@ -43,7 +46,7 @@ return [
 
     'email' => [
         'from' => 'example@example.com',
-        'to' => 'example@example.com',
+        'to'   => 'example@example.com',
 
         'subject' => 'Device is incorrectly detected',
     ],
