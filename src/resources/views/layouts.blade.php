@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="{{ bad_browser_mix('css/bad-browser.css') }}">
 
     @if($additional_css = config('bad_browser.page.additional_css'))
-        <link rel="stylesheet" href="{{ mix($additional_css) }}">
+        <link rel="stylesheet" href="{{ $additional_css }}">
     @endif
 </head>
 <body class="grey lighten-3">
