@@ -8,6 +8,10 @@
 
                     <p>{{ __('bad_browser::bad_browser.install_that') }}</p>
 
+                    @if(version_compare((string) $version, (string) $need, '>='))
+                        <p>{{ __('bad_browser::bad_browser.manual_redirect') }}</p>
+                    @endif
+
                     @include('bad-browser::components._browsers')
 
                     <p>{!! __('bad_browser::bad_browser.mistake') !!}</p>
