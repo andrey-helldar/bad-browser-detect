@@ -66,4 +66,4 @@ Now, if a user logs in from an outdated browser, it automatically redirects to t
 
 ## Copyright and License
 
-`Bad Browser` was written by Andrey Helldar for the Laravel Framework 5.4 and later, and is released under the MIT License. See the [LICENSE](LICENSE) file for details.
+`Bad Browser Detect` was written by Andrey Helldar for the Laravel Framework 5.4 and later, and is released under the MIT License. See the [LICENSE](LICENSE) file for details.
