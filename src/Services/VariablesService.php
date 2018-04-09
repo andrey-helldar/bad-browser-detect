@@ -35,7 +35,7 @@ class VariablesService
      */
     public function routeToName()
     {
-        return sprintf("%s.to", $this->routeMainName());
+        return sprintf('%s.to', $this->routeMainName());
     }
 
     /**
@@ -43,7 +43,7 @@ class VariablesService
      */
     public function routeDisableName()
     {
-        return sprintf("%s.disable", $this->routeMainName());
+        return sprintf('%s.disable', $this->routeMainName());
     }
 
     /**
@@ -81,7 +81,7 @@ class VariablesService
     public function browserUrl($browser_name = 'chrome', $device_type = 'desktop')
     {
         $browser_name = str_slug($browser_name);
-        $device_type  = str_slug($device_type);
+        $device_type = str_slug($device_type);
 
         return config("bad_browser_constants.url.{$browser_name}.$device_type");
     }

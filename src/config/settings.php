@@ -21,15 +21,15 @@ return [
      */
 
     'versions' => [
-        'msie'    => 11,
-        'msedge'  => 10,
-        'edge'    => 10,
-        'chrome'  => 43,
-        'opera'   => 43,
+        'msie' => 11,
+        'msedge' => 10,
+        'edge' => 10,
+        'chrome' => 43,
+        'opera' => 43,
         'firefox' => 31,
-        'safari'  => 8,
+        'safari' => 8,
         'android' => 5,
-        'ios'     => 7,
+        'ios' => 7,
     ],
 
     /*
@@ -38,7 +38,7 @@ return [
 
     'email' => [
         'from' => 'example@example.com',
-        'to'   => 'example@example.com',
+        'to' => 'example@example.com',
 
         'subject' => 'Device is incorrectly detected',
     ],
