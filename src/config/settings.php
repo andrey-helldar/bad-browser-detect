@@ -27,8 +27,7 @@ return [
      */
 
     'versions' => [
-        'msie' => 11,
-        'msedge' => 10,
+        'ie' => 11,
         'edge' => 10,
         'chrome' => 43,
         'opera' => 43,
