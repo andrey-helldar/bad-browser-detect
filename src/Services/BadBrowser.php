@@ -66,7 +66,7 @@ class BadBrowser
         $browser = $this->agent->browser($this->user_agent);
         $version = $this->agent->version($browser);
 
-        $browser = Str::lower($browser);
+        $browser = Str::slug($browser);
 
         if ($need = $this->config->get($browser)) {
             return version_compare((string) $version, (string) $need, '>=');

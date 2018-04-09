@@ -35,7 +35,7 @@ class BadBrowsersController extends Controller
     {
         $browser = $agent->browser($request->userAgent());
         $version = $agent->version($browser);
-        $need = config('bad_browser.versions.' . Str::lower($browser), 'unknown');
+        $need = config('bad_browser.versions.' . Str::slug($browser), 'unknown');
 
         $route_name = $this->variables->routeMainName();
         $route_to = $this->variables->routeToName();
