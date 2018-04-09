@@ -22,7 +22,7 @@ class CreateBadBrowserTable extends Migration
             $table->increments('id');
 
             $table->unsignedInteger('user_id')->nullable();
-            $table->string('user_agent');
+            $table->text('user_agent')->nullable();
             $table->ipAddress('client_ip')->default('0.0.0.0');
             $table->boolean('is_verified')->default(false);
 
