@@ -6,10 +6,9 @@
                     <span class="card-title">{{ __('bad_browser::bad_browser.need_cookie') }}</span>
                     <p>{!! __('bad_browser::bad_browser.determined', compact('browser', 'version', 'need')) !!}</p>
 
-                    <p>{{ __('bad_browser::bad_browser.install_that') }}</p>
-
                     @if(version_compare((string) $version, (string) $need, '>='))
-                        <p>{{ __('bad_browser::bad_browser.manual_redirect') }}</p>
+                        <p>&nbsp;</p>
+                        <p>{{ __('bad_browser::bad_browser.manual_redirect', compact('version', 'need')) }}</p>
                     @endif
 
                     @include('bad-browser::components._browsers')
