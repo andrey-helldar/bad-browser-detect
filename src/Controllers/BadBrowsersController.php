@@ -67,11 +67,9 @@ class BadBrowsersController extends Controller
     }
 
     /**
-     * @param \Illuminate\Http\Request $request
-     *
      * @return mixed
      */
-    public function disable(Request $request)
+    public function disable()
     {
         $cookie = cookie('bad-browser-disable', true, 60 * 24 * 3);
 
