@@ -86,7 +86,7 @@ class BadBrowsersController extends Controller
         if ($to = $request->get('to')) {
             $to = UrlsService::init($to)->decode();
 
-            return redirect($to);
+            return redirect($to, [], 307);
         }
 
         return redirect()->route($this->variables->routeMainName());
