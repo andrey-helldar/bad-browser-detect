@@ -4,6 +4,7 @@ $variables = \Helldar\BadBrowser\Services\VariablesService::init();
 
 app('router')
     ->prefix($variables->routePrefix())
+    ->middleware('web')
     ->group(function () use ($variables) {
         app('router')->get('/', 'Helldar\BadBrowser\Controllers\BadBrowsersController@show')->name($variables->routeMainName());
         app('router')->post('/', 'Helldar\BadBrowser\Controllers\BadBrowsersController@store');
