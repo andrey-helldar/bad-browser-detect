@@ -9,6 +9,8 @@
                     <p>{{ __('bad_browser::bad_browser.just_go_to_main') }}</p>
                 </div>
                 <form action="{{ route($route_to) }}" method="post" class="card-action center-align">
+                    {{ csrf_field() }}
+                    
                     <a href="{{ url('/') }}" class="btn waves-effect waves-light">
                         {{ __('bad_browser::bad_browser.buttons.main') }}
                     </a>

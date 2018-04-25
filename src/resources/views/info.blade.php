@@ -16,6 +16,8 @@
                     <p>{!! __('bad_browser::bad_browser.mistake') !!}</p>
                 </div>
                 <form action="{{ route($route_name) }}" method="post" class="card-action center-align">
+                    {{ csrf_field() }}
+
                     <a href="{{ url('/') }}" class="btn waves-effect waves-light">
                         {{ __('bad_browser::bad_browser.buttons.main') }}
                     </a>
