@@ -55,6 +55,6 @@ return [
         'enabled' => env('SLACK_ENABLED', false),
         'webhook' => env('SLACK_WEBHOOK_LOGS'),
         'username' => 'Bad Browser Detected',
-        'icon' => 'https://ai-rus.com/images/browser-crashed.png'
-    ]
+        'icon' => 'https://ai-rus.com/images/browser-crashed.png',
+    ],
 ];

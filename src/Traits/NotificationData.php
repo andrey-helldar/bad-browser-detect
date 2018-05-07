@@ -36,7 +36,7 @@ trait NotificationData
     public function __construct(BadBrowser $bad_browser, Agent $agent)
     {
         $this->bad_browser = $bad_browser;
-        $this->agent       = $agent;
+        $this->agent = $agent;
 
         $this->title = config('bad_browser.email.subject');
 
@@ -100,7 +100,7 @@ trait NotificationData
     protected function platform()
     {
         $platform = $this->agent->platform($this->bad_browser->user_agent);
-        $version  = $this->agent->version($platform);
+        $version = $this->agent->version($platform);
 
         return implode(' ', [$platform, $version]);
     }
