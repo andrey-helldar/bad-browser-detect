@@ -1,5 +1,7 @@
 let mix = require('laravel-mix');
 
+const path = require('path');
+
 /*
  |--------------------------------------------------------------------------
  | Mix Asset Management
@@ -14,6 +16,12 @@ let mix = require('laravel-mix');
 let assets = './src/resources/assets/';
 
 mix
+    .webpackConfig({
+        output: {
+            path: path.resolve(__dirname, 'src/public')
+        }
+    })
+
     .sass(assets + 'sass/bad-browser.scss', 'src/public/css')
 
     .copyDirectory(assets + 'images', 'src/public/images')
@@ -23,7 +31,3 @@ mix
     })
 
     .disableNotifications();
-
-if (mix.inProduction()) {
-    mix.sourceMaps();
-}

@@ -10,6 +10,7 @@
         "cross-env": "^5.1",
         "laravel-mix": "^2.0",
         "materialize-css": "^1.0.0-alpha.4",
+        "path": "^0.12.7",
         "popper.js": "^1.12"
     }
 }

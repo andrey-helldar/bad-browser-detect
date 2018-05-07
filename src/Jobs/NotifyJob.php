@@ -22,6 +22,8 @@ class NotifyJob implements ShouldQueue
     /**
      * Create a new job instance.
      *
+     * @param BadBrowser $bad_browser
+     *
      * @return void
      */
     public function __construct(BadBrowser $bad_browser)
