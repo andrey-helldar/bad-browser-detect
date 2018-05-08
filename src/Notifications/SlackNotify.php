@@ -35,20 +35,36 @@ class SlackNotify extends Notification
     {
         $this->compactData();
 
-        $content = implode("\n", [
-            $this->title,
-            sprintf("`%s`", $this->data->get('User Agent')),
-        ]);
-
         return (new SlackMessage())
             ->error()
             ->from(config('bad_browser.slack.username'), config('bad_browser.slack.icon'))
-            ->content($content)
+            ->content($this->getContent())
             ->attachment(function (SlackAttachment $attachment) {
                 $attachment
-                    ->fields($this->data->except('User Agent')->toArray())
+                    ->fields($this->getFields())
                     ->footer(config('app.name'))
                     ->timestamp(now());
             });
+    }
+
+    /**
+     * @return string
+     */
+    private function getContent()
+    {
+        return implode("\n", [
+            $this->title,
+            sprintf("`%s`", $this->data->get('User Agent')),
+        ]);
+    }
+
+    /**
+     * @return array
+     */
+    private function getFields()
+    {
+        return $this->data
+            ->except('User Agent', 'Data')
+            ->toArray();
     }
 }
