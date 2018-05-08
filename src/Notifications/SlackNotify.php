@@ -54,7 +54,7 @@ class SlackNotify extends Notification
     {
         return implode("\n", [
             $this->title,
-            sprintf("`%s`", $this->data->get('User Agent')),
+            sprintf('`%s`', $this->data->get('User Agent')),
         ]);
     }
 
