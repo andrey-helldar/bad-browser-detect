@@ -39,10 +39,10 @@ class BadBrowsersController extends Controller
     {
         $browser = $agent->browser($request->userAgent());
         $version = $agent->version($browser);
-        $need = config('bad_browser.versions.' . Str::slug($browser), 'unknown');
+        $need    = config('bad_browser.versions.' . Str::slug($browser), 'unknown');
 
         $route_name = $this->variables->routeMainName();
-        $route_to = $this->variables->routeToName();
+        $route_to   = $this->variables->routeToName();
 
         return view('bad-browser::info')
             ->with(compact('browser', 'version', 'need', 'route_name', 'route_to'));
@@ -55,15 +55,14 @@ class BadBrowsersController extends Controller
      */
     public function store(Request $request)
     {
-        $user_id = \Auth::check() ? \Auth::user()->id : null;
+        $user_id    = \Auth::check() ? \Auth::user()->id : null;
         $user_agent = $request->userAgent();
-        $client_ip = $request->getClientIp();
+        $client_ip  = $request->getClientIp();
 
         $item = BadBrowser::query()
             ->create(compact('user_id', 'user_agent', 'client_ip'));
 
-        NotifyJob::dispatch($item);
-
+        $this->notifyInMail($item);
         $this->notifyInSlack($item);
 
         $route_to = $this->variables->routeDisableName();
@@ -105,13 +104,27 @@ class BadBrowsersController extends Controller
      */
     private function notifyInSlack(BadBrowser $bad_browser)
     {
-        if (!config('bad_browser.slack.enabled', false)) {
+        if (!config('bad_browser.slack.enabled')) {
             return;
         }
 
         $instance = new SlackNotify($bad_browser);
 
         $this->notify($instance);
+    }
+
+    /**
+     * Notification in the Email.
+     *
+     * @param \Helldar\BadBrowser\Models\BadBrowser $bad_browser
+     */
+    private function notifyInMail(BadBrowser $bad_browser)
+    {
+        if (!config('bad_browser.email.enabled')) {
+            return;
+        }
+
+        NotifyJob::dispatch($bad_browser);
     }
 
     /**

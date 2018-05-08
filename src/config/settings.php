@@ -45,15 +45,18 @@ return [
      */
 
     'email' => [
-        'from' => 'example@example.com',
-        'to' => 'example@example.com',
+        'enabled' => env('BAD_BROWSER_EMAIL_ENABLED', true),
+
+        'from' => env('BAD_BROWSER_EMAIL_FROM', 'example@example.com'),
+        'to' => env('BAD_BROWSER_EMAIL_TO', 'example@example.com'),
 
         'subject' => 'Device is incorrectly detected',
     ],
 
     'slack' => [
-        'enabled' => env('SLACK_ENABLED', false),
-        'webhook' => env('SLACK_WEBHOOK_LOGS'),
+        'enabled' => env('BAD_BROWSER_SLACK_ENABLED', false),
+        'webhook' => env('BAD_BROWSER_SLACK_WEBHOOK'),
+
         'username' => 'Bad Browser Detected',
         'icon' => 'https://ai-rus.com/images/browser-crashed.png',
     ],
