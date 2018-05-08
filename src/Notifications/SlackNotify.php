@@ -37,7 +37,7 @@ class SlackNotify extends Notification
 
         $content = implode("\n", [
             $this->title,
-            sprintf("`%s`", $this->data->get('User Agent')),
+            sprintf('`%s`', $this->data->get('User Agent')),
         ]);
 
         return (new SlackMessage())
