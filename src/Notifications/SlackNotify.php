@@ -37,7 +37,8 @@ class SlackNotify extends Notification
 
         return (new SlackMessage())
             ->error()
-            ->from(config('bad_browser.slack.username'), config('bad_browser.slack.icon'))
+            ->from(config('bad_browser.slack.username'))
+            ->image(config('bad_browser.slack.icon'))
             ->content($this->getContent())
             ->attachment(function (SlackAttachment $attachment) {
                 $attachment
