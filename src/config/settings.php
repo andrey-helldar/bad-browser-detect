@@ -58,6 +58,11 @@ return [
         'webhook' => env('BAD_BROWSER_SLACK_WEBHOOK'),
 
         'username' => 'Bad Browser Detected',
+
+        /*
+         * URL Address of icon.
+         */
+
         'icon' => 'https://ai-rus.com/images/browser-crashed.png',
     ],
 ];
