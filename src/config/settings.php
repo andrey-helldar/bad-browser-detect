@@ -61,6 +61,8 @@ return [
 
         /*
          * URL Address of icon.
+         *
+         * Specify NULL to use the default icon.
          */
 
         'icon' => 'https://ai-rus.com/images/browser-crashed.png',
