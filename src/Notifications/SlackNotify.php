@@ -41,7 +41,6 @@ class SlackNotify extends Notification
             ->content($this->title)
             ->attachment(function (SlackAttachment $attachment) {
                 $attachment
-                    ->title($this->exception->getMessage())
                     ->fields($this->data->toArray())
                     ->footer(config('app.name'))
                     ->timestamp(now());
