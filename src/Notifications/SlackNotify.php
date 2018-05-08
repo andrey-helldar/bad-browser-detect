@@ -2,7 +2,6 @@
 
 namespace Helldar\BadBrowser\Notifications;
 
-use Helldar\BadBrowser\Models\BadBrowser;
 use Helldar\BadBrowser\Traits\NotificationData;
 use Illuminate\Bus\Queueable;
 use Illuminate\Notifications\Messages\SlackAttachment;
@@ -12,21 +11,6 @@ use Illuminate\Notifications\Notification;
 class SlackNotify extends Notification
 {
     use Queueable, NotificationData;
-
-    /**
-     * @var \Helldar\BadBrowser\Models\BadBrowser
-     */
-    protected $bad_browser;
-
-    /**
-     * Create a new notification instance.
-     *
-     * @param \Helldar\BadBrowser\Models\BadBrowser $bad_browser
-     */
-    public function __construct(BadBrowser $bad_browser)
-    {
-        $this->bad_browser = $bad_browser;
-    }
 
     /**
      * Get the notification's delivery channels.
