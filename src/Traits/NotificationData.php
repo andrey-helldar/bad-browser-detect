@@ -31,12 +31,11 @@ trait NotificationData
      * NotificationData constructor.
      *
      * @param \Helldar\BadBrowser\Models\BadBrowser $bad_browser
-     * @param \Jenssegers\Agent\Agent               $agent
      */
-    public function __construct(BadBrowser $bad_browser, Agent $agent)
+    public function __construct(BadBrowser $bad_browser)
     {
         $this->bad_browser = $bad_browser;
-        $this->agent = $agent;
+        $this->agent = new Agent();
 
         $this->title = config('bad_browser.email.subject');
 
