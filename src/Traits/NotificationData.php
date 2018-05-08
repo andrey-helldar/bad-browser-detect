@@ -53,6 +53,7 @@ trait NotificationData
         $this->data->put('User ID', $this->bad_browser->user_id ?: '---');
         $this->data->put('IP', $this->bad_browser->client_ip);
         $this->data->put('Date', $this->bad_browser->created_at);
+        $this->data->put('URL', $this->currentUrl());
     }
 
     /**
@@ -113,5 +114,17 @@ trait NotificationData
         $version = $this->agent->version($browser);
 
         return implode(' ', [$browser, $version]);
+    }
+
+    /**
+     * @return string
+     */
+    protected function currentUrl()
+    {
+        try {
+            return request()->getHost();
+        } catch (\Exception $e) {
+            return config('app.url');
+        }
     }
 }
