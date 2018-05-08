@@ -64,7 +64,7 @@ class SlackNotify extends Notification
     private function getFields()
     {
         return $this->data
-            ->except('User Agent', 'Data')
+            ->except('User Agent', 'Date')
             ->toArray();
     }
 }
