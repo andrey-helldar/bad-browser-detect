@@ -2,6 +2,7 @@
 
 namespace Helldar\BadBrowser\Notifications;
 
+use Carbon\Carbon;
 use Helldar\BadBrowser\Traits\NotificationData;
 use Illuminate\Bus\Queueable;
 use Illuminate\Notifications\Messages\SlackAttachment;
@@ -44,7 +45,7 @@ class SlackNotify extends Notification
                 $attachment
                     ->fields($this->getFields())
                     ->footer(config('app.name'))
-                    ->timestamp(now());
+                    ->timestamp(Carbon::now());
             });
     }
 
