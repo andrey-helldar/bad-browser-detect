@@ -2,21 +2,14 @@
 
 Determine the minimum acceptable version of the browser and notify the user if the version does not match the required version.
 
-![bad-browser-detect](https://user-images.githubusercontent.com/10347617/38484736-37cae152-3be0-11e8-9447-aff0e20fee46.png)
+![bad browser detect](https://user-images.githubusercontent.com/10347617/40196941-a6129562-5a1a-11e8-9f9f-67abfc7a91b1.png)
 
 <p align="center">
-<a href="https://travis-ci.org/andrey-helldar/bad-browser-detect"><img src="https://travis-ci.org/andrey-helldar/bad-browser-detect.svg?branch=master&style=flat-square" alt="Build Status" /></a>
-<a href="https://packagist.org/packages/andrey-helldar/bad-browser-detect"><img src="https://img.shields.io/packagist/dt/andrey-helldar/bad-browser-detect.svg?style=flat-square" alt="Total Downloads" /></a>
-<a href="https://packagist.org/packages/andrey-helldar/bad-browser-detect"><img src="https://poser.pugx.org/andrey-helldar/bad-browser-detect/v/stable?format=flat-square" alt="Latest Stable Version" /></a>
-<a href="https://packagist.org/packages/andrey-helldar/bad-browser-detect"><img src="https://poser.pugx.org/andrey-helldar/bad-browser-detect/v/unstable?format=flat-square" alt="Latest Unstable Version" /></a>
-<a href="https://github.com/andrey-helldar/bad-browser-detect"><img src="https://poser.pugx.org/andrey-helldar/bad-browser-detect/license?format=flat-square" alt="License" /></a>
-</p>
-
-
-<p align="center">
-<a href="https://www.versioneye.com/php/andrey-helldar:bad-browser-detect/dev-master"><img src="https://www.versioneye.com/php/andrey-helldar:bad-browser-detect/dev-master/badge?style=flat-square" alt="Dependency Status" /></a>
-<a href="https://styleci.io/repos/45746985"><img src="https://styleci.io/repos/75637284/shield" alt="StyleCI" /></a>
-<a href="https://php-eye.com/package/andrey-helldar/bad-browser-detect"><img src="https://php-eye.com/badge/andrey-helldar/bad-browser-detect/tested.svg?style=flat" alt="PHP-Eye" /></a>
+    <a href="https://styleci.io/repos/45746985"><img src="https://styleci.io/repos/75637284/shield" alt="StyleCI" /></a>
+    <a href="https://packagist.org/packages/andrey-helldar/bad-browser-detect"><img src="https://img.shields.io/packagist/dt/andrey-helldar/bad-browser-detect.svg?style=flat-square" alt="Total Downloads" /></a>
+    <a href="https://packagist.org/packages/andrey-helldar/bad-browser-detect"><img src="https://poser.pugx.org/andrey-helldar/bad-browser-detect/v/stable?format=flat-square" alt="Latest Stable Version" /></a>
+    <a href="https://packagist.org/packages/andrey-helldar/bad-browser-detect"><img src="https://poser.pugx.org/andrey-helldar/bad-browser-detect/v/unstable?format=flat-square" alt="Latest Unstable Version" /></a>
+    <a href="https://packagist.org/packages/andrey-helldar/bad-browser-detect"><img src="https://poser.pugx.org/andrey-helldar/bad-browser-detect/license?format=flat-square" alt="License" /></a>
 </p>
 
 
