@@ -15,7 +15,7 @@ class BadBrowser extends Model
      * @var array
      */
     protected $casts = [
-        'user_id' => 'int',
+        'user_id'     => 'int',
         'is_verified' => 'bool',
     ];
 }

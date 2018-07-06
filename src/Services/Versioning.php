@@ -20,7 +20,7 @@ class Versioning
      */
     public function mix($filename)
     {
-        $dir = $this->publicPath();
+        $dir      = $this->publicPath();
         $filename = ltrim($filename, '/');
 
         return $this->filenameWithHash($dir . $filename);

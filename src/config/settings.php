@@ -27,17 +27,17 @@ return [
      */
 
     'versions' => [
-        'ie' => 11,
-        'edge' => 10,
-        'chrome' => 43,
-        'opera' => 43,
+        'ie'         => 11,
+        'edge'       => 10,
+        'chrome'     => 43,
+        'opera'      => 43,
         'opera-mini' => 43,
-        'firefox' => 31,
-        'safari' => 8,
-        'android' => 5,
-        'ios' => 7,
-        'ucbrowser' => 9,
-        'vivaldi' => 1,
+        'firefox'    => 31,
+        'safari'     => 8,
+        'android'    => 5,
+        'ios'        => 7,
+        'ucbrowser'  => 9,
+        'vivaldi'    => 1,
     ],
 
     /*
@@ -48,7 +48,7 @@ return [
         'enabled' => env('BAD_BROWSER_EMAIL_ENABLED', true),
 
         'from' => env('BAD_BROWSER_EMAIL_FROM', 'example@example.com'),
-        'to' => env('BAD_BROWSER_EMAIL_TO', 'example@example.com'),
+        'to'   => env('BAD_BROWSER_EMAIL_TO', 'example@example.com'),
 
         'subject' => 'Device is incorrectly detected',
     ],
