@@ -11,16 +11,17 @@ class BadBrowserMiddleware
      * Handle an incoming request.
      *
      * @param \Illuminate\Http\Request $request
-     * @param \Closure                 $next
+     * @param \Closure $next
      *
      * @return mixed
      */
     public function handle(Request $request, \Closure $next)
     {
+        $is_enable   = config('bad_browser.enable', true);
         $bad_browser = bad_browser($request->userAgent());
         $cookie      = $request->cookie('bad-browser-disable', false);
 
-        if ($bad_browser->isNotCrawler() && $bad_browser->isNotAccept() && !$cookie && $this->isNotAPI($request)) {
+        if ($is_enable && $bad_browser->isNotCrawler() && $bad_browser->isNotAccept() && !$cookie && $this->isNotAPI($request)) {
             $variables = VariablesService::init();
 
             $base_url   = $request->url();

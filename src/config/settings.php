@@ -1,6 +1,8 @@
 <?php
 
 return [
+    'enable' => env('BAD_BROWSER_ENABLED', true),
+
     /*
      * The URL prefix.
      * Default, 'bad-browser' to get the link of the page view.
