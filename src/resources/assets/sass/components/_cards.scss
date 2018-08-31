@@ -1,0 +1,40 @@
+@charset "UTF-8";
+
+.bad-browser {
+    .card {
+        background-color: $card-bg-color;
+        padding: $card-padding;
+        max-width: $card-max-width;
+        box-shadow: $card-shadow;
+        border-radius: $card-radius;
+        overflow: hidden;
+
+        .card-content {
+            padding: 0;
+
+            .card-title {
+                font-size: $card-font-size;
+
+                @media #{$small-and-down} {
+                    font-size: $card-font-size * 0.8;
+                }
+            }
+
+            p {}
+        }
+
+        .card-action {
+            padding: 0;
+
+            @media #{$small-and-down} {
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+        }
+
+        @media #{$medium-and-down} {
+            border-radius: 0;
+        }
+    }
+}

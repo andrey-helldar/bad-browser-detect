@@ -9,8 +9,9 @@
     "devDependencies": {
         "cross-env": "^5.2",
         "laravel-mix": "^2.1",
-        "materialize-css": "^1.0.0-alpha.4",
-        "path": "^0.12.7",
-        "popper.js": "^1.14"
+        "normalize.css": "^8.0",
+        "path": "^0.12",
+        "purify-css": "^1.2",
+        "purifycss-webpack": "^0.7"
     }
 }

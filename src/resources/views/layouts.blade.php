@@ -13,13 +13,9 @@
         <link rel="stylesheet" href="{{ asset($additional_css) }}">
     @endif
 </head>
-<body class="grey lighten-3">
+<body class="bad-browser">
 
-<div class="bad-browser">
-
-    {!! $slot !!}
-
-</div>
+{!! $slot !!}
 
 </body>
 </html>

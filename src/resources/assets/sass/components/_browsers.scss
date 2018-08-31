@@ -1,79 +1,88 @@
 @charset "UTF-8";
 
+// NEW
+
 .bad-browser {
-    & &-item {
-        text-align: center;
-        padding-top: 20px;
+    .browsers {
+        margin: 20px 0;
 
-        .browser {
-            display: inline-block;
-            border-bottom: 2px solid transparent;
-            padding-bottom: 5px;
-            margin-bottom: 5px;
-            transition: border-bottom-color .2s;
+        .browsers-title {}
 
-            &-icon {
-                width: 79px;
-                height: 79px;
+        .browsers-items {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
 
-                &-safari {
-                    background: transparent url('#{$path-published-images}/browsers.png') no-repeat 0 $bad-browser-position-safari;
-                }
+            .browser-item {
+                text-align: center;
+                margin-top: 20px;
 
-                &-firefox {
-                    background: transparent url('#{$path-published-images}/browsers.png') no-repeat 0 $bad-browser-position-firefox;
-                }
-
-                &-chrome {
-                    background: transparent url('#{$path-published-images}/browsers.png') no-repeat 0 $bad-browser-position-chrome;
-                }
-
-                &-opera {
-                    background: transparent url('#{$path-published-images}/browsers.png') no-repeat 0 $bad-browser-position-opera;
-                }
-            }
-        }
-
-        .browser-store {
-            display: inline-block;
-            padding-top: 50px;
-            width: 120px;
-            height: 36px;
-            overflow: hidden;
-            transition: opacity .2s;
-
-            &-apple {
-                background: transparent url('#{$path-published-images}/app-store.png') no-repeat center center;
-            }
-
-            &-google {
-                background: transparent url('#{$path-published-images}/google-play.png') no-repeat center center;
-            }
-        }
-
-        .mobile_store {
-            &:hover {
-                .browser-store {
-                    opacity: .75;
-
-                    &:hover {
-                        opacity: 1;
+                &:hover {
+                    .browser-icon {
+                        border-bottom: 2px solid $secondary-color-hover;
                     }
                 }
-            }
 
-            &.row {
-                padding: 0;
+                a {
+                    text-align: center;
+                    text-decoration: none;
 
-                .col {
-                    padding: 0;
+                    .browser-icon {
+                        display: block;
+                        border-bottom: 2px solid transparent;
+                        padding-bottom: 5px;
+                        margin: 0 auto 5px;
+                        width: $bad-browser-icon-size;
+                        height: $bad-browser-icon-size;
+                        transition: border-bottom-color .2s;
+
+                        &.browser-icon-chrome {
+                            background: transparent url('#{$path-published-images}/browsers.png') no-repeat 0 $bad-browser-position-chrome;
+                        }
+                        &.browser-icon-firefox {
+                            background: transparent url('#{$path-published-images}/browsers.png') no-repeat 0 $bad-browser-position-firefox;
+                        }
+                        &.browser-icon-opera {
+                            background: transparent url('#{$path-published-images}/browsers.png') no-repeat 0 $bad-browser-position-opera;
+                        }
+                        &.browser-icon-safari {
+                            background: transparent url('#{$path-published-images}/browsers.png') no-repeat 0 $bad-browser-position-safari;
+                        }
+                    }
                 }
-            }
-        }
 
-        &:hover {
-            .browser {
-                border-bottom: 2px solid $primary-color;
+                .mobile {
+                    margin-top: 10px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+
+                    a {
+                        width: 120px;
+                        height: 36px;
+                        overflow: hidden;
+                        line-height: 40;
+                        margin: 0 0 5px;
+                        transition: opacity .2s;
+                    }
+
+                    &:hover {
+                        a {
+                            opacity: .5;
+
+                            &:hover {
+                                opacity: 1;
+                            }
+                        }
+                    }
+
+                    .mobile-apple {
+                        background: transparent url('#{$path-published-images}/app-store.png') no-repeat center center;
+                    }
+                    .mobile-google {
+                        background: transparent url('#{$path-published-images}/google-play.png') no-repeat center center;
+                    }
+                }
             }
         }
     }

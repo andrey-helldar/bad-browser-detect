@@ -1,8 +1,29 @@
 @charset "UTF-8";
 
+html,
 body {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-    justify-content: center;
+    font-family: $font-family;
+    font-size: $font-size;
+    font-weight: $font-weight;
+}
+
+body {
+    &.bad-browser {
+        background-color: $background-color;
+        color: $primary-color;
+        display: flex;
+        min-height: 100vh;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        a {
+            color: $secondary-color;
+            transition: color .2s;
+
+            &:hover {
+                color: $secondary-color-hover;
+            }
+        }
+    }
 }
