@@ -22,7 +22,7 @@ mix
         }
     })
 
-    .sass(assets + 'sass/bad-browser.scss', 'src/public/css')
+    .sass(assets + 'sass/bad-browser.scss', 'css')
 
     .copyDirectory(assets + 'images', 'src/public/images')
 
