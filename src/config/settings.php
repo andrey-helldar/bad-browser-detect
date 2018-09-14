@@ -67,6 +67,6 @@ return [
          * Specify NULL to use the default icon.
          */
 
-        // 'icon' => url('images/browser-crashed.png'),
+        // 'icon' => env('APP_URL') . '/images/browser-crashed.png',
     ],
 ];
