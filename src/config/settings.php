@@ -67,6 +67,6 @@ return [
          * Specify NULL to use the default icon.
          */
 
-        'icon' => 'https://ai-rus.com/images/browser-crashed.png',
+        'icon' => url('images/browser-crashed.png'),
     ],
 ];
