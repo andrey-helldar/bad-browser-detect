@@ -4,6 +4,7 @@ namespace Helldar\BadBrowser\Middlewares;
 
 use Helldar\BadBrowser\Services\VariablesService;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class BadBrowserMiddleware
 {
@@ -27,7 +28,7 @@ class BadBrowserMiddleware
             $base_url   = $request->url();
             $route_urls = $this->urls($variables);
 
-            if (!str_contains($base_url, $route_urls)) {
+            if (!Str::contains($base_url, $route_urls)) {
                 return redirect()->route($variables->routeMainName(), [], 307);
             }
         }
@@ -44,7 +45,7 @@ class BadBrowserMiddleware
     {
         $url = $request->path();
 
-        return !starts_with($url, 'api/');
+        return !Str::startsWith($url, 'api/');
     }
 
     /**

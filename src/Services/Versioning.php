@@ -3,6 +3,7 @@
 namespace Helldar\BadBrowser\Services;
 
 use Helldar\BadBrowser\Traits\Services;
+use Illuminate\Support\Str;
 
 class Versioning
 {
@@ -45,7 +46,7 @@ class Versioning
             $this->public_path = config('bad_browser_constants.assets_public_path', '/');
         }
 
-        return str_finish($this->public_path, '/');
+        return Str::finish($this->public_path, '/');
     }
 
     /**

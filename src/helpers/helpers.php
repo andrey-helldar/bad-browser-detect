@@ -36,3 +36,19 @@ if (!function_exists('bad_browser_url')) {
         return \Helldar\BadBrowser\Services\UrlsService::init($url);
     }
 }
+
+if (!function_exists('str_slug')) {
+    /**
+     * Generate a URL friendly "slug" from a given string.
+     *
+     * @param  string $title
+     * @param  string $separator
+     * @param  string|null $language
+     *
+     * @return string
+     */
+    function str_slug($title, $separator = '-', $language = 'en')
+    {
+        return \Illuminate\Support\Str::slug($title, $separator, $language);
+    }
+}
