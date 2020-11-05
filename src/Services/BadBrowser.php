@@ -8,7 +8,7 @@ use Jenssegers\Agent\Agent;
 class BadBrowser
 {
     /**
-     * @var null|string
+     * @var string|null
      */
     protected $user_agent = null;
 

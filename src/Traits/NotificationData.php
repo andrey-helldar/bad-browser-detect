@@ -8,16 +8,6 @@ use Jenssegers\Agent\Agent;
 trait NotificationData
 {
     /**
-     * @var \Helldar\BadBrowser\Models\BadBrowser
-     */
-    protected $bad_browser;
-
-    /**
-     * @var \Jenssegers\Agent\Agent
-     */
-    protected $agent;
-
-    /**
      * @var string
      */
     public $title;
@@ -26,6 +16,16 @@ trait NotificationData
      * @var \Illuminate\Support\Collection
      */
     public $data;
+
+    /**
+     * @var \Helldar\BadBrowser\Models\BadBrowser
+     */
+    protected $bad_browser;
+
+    /**
+     * @var \Jenssegers\Agent\Agent
+     */
+    protected $agent;
 
     /**
      * NotificationData constructor.

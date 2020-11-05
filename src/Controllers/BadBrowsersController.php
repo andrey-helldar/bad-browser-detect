@@ -98,6 +98,14 @@ class BadBrowsersController extends Controller
     }
 
     /**
+     * @return string
+     */
+    public function routeNotificationForSlack()
+    {
+        return config('bad_browser.slack.webhook');
+    }
+
+    /**
      * Notification in the Slack channel.
      *
      * @param \Helldar\BadBrowser\Models\BadBrowser $bad_browser
@@ -125,13 +133,5 @@ class BadBrowsersController extends Controller
         }
 
         NotifyJob::dispatch($bad_browser);
-    }
-
-    /**
-     * @return string
-     */
-    public function routeNotificationForSlack()
-    {
-        return config('bad_browser.slack.webhook');
     }
 }

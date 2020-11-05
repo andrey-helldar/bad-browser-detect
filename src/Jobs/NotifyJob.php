@@ -12,7 +12,10 @@ use Illuminate\Queue\SerializesModels;
 
 class NotifyJob implements ShouldQueue
 {
-    use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
+    use Dispatchable;
+    use InteractsWithQueue;
+    use Queueable;
+    use SerializesModels;
 
     /**
      * @var BadBrowser
@@ -23,8 +26,6 @@ class NotifyJob implements ShouldQueue
      * Create a new job instance.
      *
      * @param BadBrowser $bad_browser
-     *
-     * @return void
      */
     public function __construct(BadBrowser $bad_browser)
     {
@@ -33,8 +34,6 @@ class NotifyJob implements ShouldQueue
 
     /**
      * Execute the job.
-     *
-     * @return void
      */
     public function handle()
     {

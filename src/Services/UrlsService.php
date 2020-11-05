@@ -10,7 +10,7 @@ class UrlsService
     protected $url;
 
     /**
-     * @var null|string
+     * @var string|null
      */
     protected $route_name = null;
 
