@@ -9,7 +9,9 @@ use Illuminate\Queue\SerializesModels;
 
 class NotifyMail extends Mailable
 {
-    use Queueable, SerializesModels, NotificationData;
+    use Queueable;
+    use SerializesModels;
+    use NotificationData;
 
     /**
      * Build the message.

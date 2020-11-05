@@ -11,7 +11,8 @@ use Illuminate\Notifications\Notification;
 
 class SlackNotify extends Notification
 {
-    use Queueable, NotificationData;
+    use Queueable;
+    use NotificationData;
 
     /**
      * Get the notification's delivery channels.
