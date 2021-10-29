@@ -2,7 +2,7 @@
 
 Determine the minimum acceptable version of the browser and notify the user if the version does not match the required version.
 
-![bad browser detect](https://user-images.githubusercontent.com/10347617/40197722-f1b7b496-5a1c-11e8-8548-e0c425fa33ce.png)
+<img src="https://preview.dragon-code.pro/andrey-helldar/bad-browser-detect.svg?brand=laravel" alt="Laravel Bad Browser Detect"/>
 
 <p align="center">
     <a href="https://styleci.io/repos/45746985"><img src="https://styleci.io/repos/75637284/shield" alt="StyleCI" /></a>
